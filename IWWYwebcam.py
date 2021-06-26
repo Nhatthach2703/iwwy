@@ -4,17 +4,17 @@ import time
 
 import openpyxl
 
-wb = openpyxl.load_workbook('C:/Users/ALICE/Desktop/sample.xlsx') 
+wb = openpyxl.load_workbook('Your .xlsx') 
 
 label = ''
 count = 1
 preLabel = 'open'
 
-cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
-net = cv2.dnn.readNet('C:/Users/ALICE/Desktop/YOLO/IWWYsource/yolov3_1800.weights', 'C:/Users/ALICE/Desktop/YOLO/IWWYsource/yolov3.cfg')
+cap = cv2.VideoCapture(0, cv2.CAP_DSHOW) #Đọc từ webcam
+net = cv2.dnn.readNet('Your .weights', 'Your .cfg')
 
 classes = []
-with open ('C:/Users/ALICE/Desktop/YOLO/IWWYsource/yolo.names', 'r') as f:
+with open ('Your .names', 'r') as f:
     classes = f.read().splitlines()
 
 
@@ -62,7 +62,7 @@ while True:
             label = str(classes[class_ids[i]])
             confidence = str(round(confidences[i],2))
             color = colors[i]
-
+            
             cv2.rectangle(img,(x,y),(x+w, y+h),color,2)
             cv2.putText(img,label+" "+confidence,(x,y-20),font,2,(255,255,255),2)
 
@@ -110,7 +110,7 @@ while True:
 
     key = cv2.waitKey(1)
     if key ==27:
-        wb.save('C:/Users/ALICE/Desktop/sample.xlsx')
+        wb.save('Your .xlsx')
         break
 
 cap.release()
