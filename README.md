@@ -8,7 +8,7 @@
 **1. Link dành cho mục đích kiểm tra việc train**
 - Link colab: [Link](https://colab.research.google.com/drive/1rSjvK0XzyQSCPsmd-y84P3yKCEEklz_U?usp=sharing)
 - Link các file .weights đã train và backup: [Link](https://drive.google.com/drive/folders/1D2cVzddCFhke6ibS6RRbSR90bcsBe1pI?usp=sharing)
-- Link darknet: (https://drive.google.com/file/d/103sUkIeiz65G5k5WPxgHuqDuHPKXkcET/view?usp=sharing)
+- Link darknet: [Link](https://drive.google.com/file/d/103sUkIeiz65G5k5WPxgHuqDuHPKXkcET/view?usp=sharing)
 
 **2. Link file cần tải về để chạy chương trình:**
-- Link yolov3_1800.weights: (https://drive.google.com/file/d/1-YtTaFOG0f6hLrN_4hSZ_jDSojtbed7G/view?usp=sharing)
+- Link yolov3_1800.weights: [Link](https://drive.google.com/file/d/1-YtTaFOG0f6hLrN_4hSZ_jDSojtbed7G/view?usp=sharing)
