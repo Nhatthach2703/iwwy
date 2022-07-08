@@ -1,3 +1,4 @@
+from pygame import mixer
 import cv2
 import numpy as np
 import time
@@ -5,7 +6,10 @@ import time
 import openpyxl
 
 wb = openpyxl.load_workbook('Your .xlsx') 
+mixer.init()
+mixer.music.load('Your .mp3')
 
+play= 0
 label = ''
 count = 1
 preLabel = 'open'
@@ -99,12 +103,18 @@ while True:
                 sheet = wb['16h00 - 16h59']
             else:
                 sheet = wb['else']
+                if play==0:   
+                mixer.music.play()   
+                play=1
+  
             if count == 1:  
                 sheet.cell(row=int(sheet.max_row)+1, column=1, value=time.ctime())
                 print (time.ctime())
                 count = 0
 
     if label == 'open':
+        mixer.music.stop()
+        play = 0
         count = 1
         preLabel = label
 
